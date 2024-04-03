@@ -1,99 +1,91 @@
-<!-- FILEPATH: /Users/naytoeaung/Desktop/index.html -->
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Rent</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f2f2f2;
-      }
-      .link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 33.33vh;
-        width: 100%;
-        font-size: 2rem;
-        color: white;
-        text-decoration: none;
-      }
-      .link1 {
-        background-color: #c9af48;
-      }
-      .link2 {
-        background-color: #1891f3;
-      }
-      .link3 {
-        background-color: #f44336;
-      }
-      @media only screen and (max-width: 600px) {
-        .link {
-          font-size: 1.5rem;
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
         }
-      }
-      /* iPhone 14 Pro, 15 Pro */
-      @media only screen 
-        and (device-width : 375px) 
-        and (device-height : 812px) 
-        and (-webkit-device-pixel-ratio : 3) {
-        meta[name="viewport"] {
-          content: width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;
+        .header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
         }
-      }
-      /* iPhone 12 Mini */
-      @media only screen 
-        and (device-width : 360px) 
-        and (device-height : 780px) 
-        and (-webkit-device-pixel-ratio : 3) {
-        meta[name="viewport"] {
-          content: width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
         }
-      }
-      /* Samsung Galaxy S21 Ultra */
-      @media only screen 
-        and (device-width : 1080px) 
-        and (device-height : 2400px) 
-        and (-webkit-device-pixel-ratio : 3.5) {
-        meta[name="viewport"] {
-          content: width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;
+        .card {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
         }
-      }
-    </style>
-  </head>
-  <body>
-    <!--unpaid-->
-    <div class="container" style="display:flex">
-      <a href="src/paid.html" class="link link1" style="display:none;">Myat Thiri Khine</a>
-      <a href="src/mtrk-stat.html" class="link link1" style="display:flex">Myat Thiri Khine</a>
-      
-      <a href="src/paid.html" class="link link2" style="display:none;">Khant Zaw Aung</a>
-      <a href="src/kza-stat.html" class="link link2" style="display:flex" >Khant Zaw Aung</a>
-      
-      <a href="src/paid.html" class="link link3"  style="display:flex;">Kyaw Kyaw Naing</a>
-      <a href="src/kkn-stat.html" class="link link3" style="display:none">Kyaw Kyaw Naing</a>
-    </div>
+        .card h3 {
+            margin: 0;
+            color: #333;
+        }
+        .card a {
+            display: block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .status-paid {
+    color: #008080;
+}
 
-    <!--paid-->
-   <!-- <div class="container" style="display:none">
-      <a href="src/paid.html" class="link link1" >Myat Thiri Khine</a>
-      <a href="src/mtrk-stat.html" class="link link1" style="display:none;">Myat Thiri Khine</a>
-      
-      <a href="src/paid.html" class="link link2" >Khant Zaw Aung</a>
-      <a href="src/kza-stat.html" class="link link2" style="display:none;">Khant Zaw Aung</a>
-      
-      <a href="src/paid.html" class="link link3"  >Kyaw Kyaw Naing</a>
-      <a href="src/kkn-stat.html" class="link link3" style="display:none;">Kyaw Kyaw Naing</a>
-    </div> -->
-  </body>
+.status-unpaid {
+    color: #E57373;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Rent Information Dashboard</h1>
+</div>
+
+<div class="container">
+    <div class="card">
+    <h3>Myat Thiri Khine</h3>
+    <!-- Paid Link, modify display style as needed -->
+    <a href="src/paid.html" style="display:none;">Payment Status: &nbsp;<span class="status-paid"> Paid</span></a>
+    <!-- Unpaid Link -->
+    <a href="src/mtrk-stat.html" style="display:flex;">Payment Status: &nbsp;<span class="status-unpaid"> Unpaid</span></a>
+</div>
+
+<div class="card">
+    <h3>Khant Zaw Aung</h3>
+    <!-- Paid Link, modify display style as needed -->
+    <a href="src/paid.html" style="display:none;">Payment Status: &nbsp;<span class="status-paid"> Paid</span></a>
+    <!-- Unpaid Link -->
+    <a href="src/kza-stat.html" style="display:flex;">Payment Status: &nbsp;<span class="status-unpaid"> Unpaid</span></a>
+</div>
+
+<div class="card">
+    <h3>Kyaw Kyaw Naing</h3>
+    <!-- Paid Link -->
+    <a href="src/paid.html" style="display:flex;">Payment Status: &nbsp;<span class="status-paid"> Paid</span></a>
+    <!-- Unpaid Link, modify display style as needed -->
+    <a href="src/kkn-stat.html" style="display:none;">Payment Status: &nbsp;<span class="status-unpaid"> Unpaid</span></a>
+</div>
+
+</div>
+
+</body>
 </html>

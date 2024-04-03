@@ -1,9 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/naytoeaung/Library/Mobile Documents/com~apple~CloudDocs/Apartments/Phoenix/Rent/foo'
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003F00, symSize: 0x78 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _sumIt, symObjAddr: 0x78, symBinAddr: 0x100003F78, symSize: 0x18 }
-  - { offsetInCU: 0x66, offset: 0x66, size: 0x8, addend: 0x0, symName: _sumIt.sum, symObjAddr: 0x540, symBinAddr: 0x100008000, symSize: 0x0 }
-  - { offsetInCU: 0x77, offset: 0x77, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003F00, symSize: 0x78 }
-...

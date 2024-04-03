@@ -42,6 +42,67 @@
         .btn:hover {
             background-color: #0056b3;
         }
+        /* Additional global styles */
+* {
+    box-sizing: border-box;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 5px solid #fff;
+    animation: fadeIn 1s ease-out;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-out; /* Slightly delayed fade-in for buttons */
+}
+
+.btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+    animation: fadeIn 2s ease-out; /* Delayed fade-in for each button individually */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
     </style>
 </head>
 <body>

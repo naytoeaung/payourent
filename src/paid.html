@@ -1,139 +1,107 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Cheers!</title>
-        <style>
-            /* Center the text and character */
-            body {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                background-color: #1a1206;
-            }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paid!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #f5af19, #f12711);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-            /* Add animation to the text */
+        .container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 10vw;
+            margin: 0;
+            animation: glow 1.5s infinite;
+        }
+
+        h1 span {
+            animation: bounce 2s infinite;
+            display: inline-block;
+        }
+
+        .emoji {
+            font-size: 8vw;
+            animation: spin 4s linear infinite;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .gif-container {
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .gif-container img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 20px;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4;
+            }
+            50% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0); 
+            }
+            40% {
+                transform: translateY(-30px); 
+            }
+            60% {
+                transform: translateY(-15px); 
+            }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
             h1 {
-                
-                font-size: 50px;
-                font-weight: bold;
-                color: #ff69b4;
-                animation: rainbow 5s ease-in-out infinite;
+                font-size: 15vw;
             }
-
-            /* Define the rainbow animation */
-            @keyframes rainbow {
-                0% {
-                    color: #ff69b4;
-                }
-                25% {
-                    color: #ff8c00;
-                }
-                50% {
-                    color: #ffd700;
-                }
-                75% {
-                    color: #00ff7f;
-                }
-                100% {
-                    color: #1e90ff;
-                }
+            .emoji {
+                font-size: 12vw;
             }
-
-            /* Add animation to the character */
-            .character {
-                position: relative;
-                width: 100px;
-                height: 100px;
-                animation: wave 2s ease-in-out infinite;
-            }
-
-            /* Define the wave animation */
-            @keyframes wave {
-                0% {
-                    transform: rotate(0deg);
-                }
-                25% {
-                    transform: rotate(15deg);
-                }
-                50% {
-                    transform: rotate(0deg);
-                }
-                75% {
-                    transform: rotate(-15deg);
-                }
-                100% {
-                    transform: rotate(0deg);
-                }
-            }
-
-            /* Add animation to the image */
-            .pop-off {
-                position: absolute;
-                bottom: -100px;
-                animation: pop-off 2s ease-in-out forwards;
-            }
-
-            /* Define the pop-off animation */
-            @keyframes pop-off {
-                0% {
-                    bottom: -100px;
-                }
-                100% {
-                    bottom: 0;
-                }
-            }
-             /* Media queries for different screen sizes */
-    @media only screen and (max-width: 375px) { /* iPhone 12 mini */
-        h1 {
-            margin-top: -140px;
-            font-size: 30px;
         }
-        .character {
-            width: 50px;
-            height: 50px;
-        }
-    }
-
-    @media only screen and (max-width: 390px) { /* Samsung Galaxy S21 Ultra */
-        h1 {
-            margin-top: -140px;
-            font-size: 40px;
-        }
-        .character {
-            width: 70px;
-            height: 70px;
-        }
-    }
-
-    @media only screen and (max-width: 428px) { /* iPhone 14 Pro, 15 Pro */
-        h1 {
-            margin-top: -140px;
-            font-size: 45px;
-        }
-        .character {
-            width: 80px;
-            height: 80px;
-        }
-    }
-        </style>
-    </head>
-    <body>
-
-        <h1 style="display: inline-block;">Status: Paid</h1>
-        <img src="cheers.jpg" alt="" class="pop-off" style="display: inline-block;">
-                       
-                <script>
-                    // Add JavaScript to make the character follow the text
-                    const character = document.querySelector('.character');
-                    const h1 = document.querySelector('h1');
-                    const h1Rect = h1.getBoundingClientRect();
-                    character.style.top = `${h1Rect.bottom + 20}px`;
-                    character.style.left = `${h1Rect.left}px`;
-                </script>
-            </body>
-        </html>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <span>P</span><span>a</span><span>i</span><span>d</span><span>!</span>
+        </h1>
+        <div class="emoji">💰🎉</div>
+        <div class="gif-container">
+            <img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif" alt="Confetti GIF">
+        </div>
+    </div>
+</body>
+</html>
